@@ -1,7 +1,7 @@
-import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { ALL_ROUTES } from "./shared/routes";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+import './App.css';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ALL_ROUTES } from './shared/routes';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import {
   DashboardContainer,
   Dashboard,
@@ -12,9 +12,10 @@ import {
   // AgentProfile,
   // Agents,
   CreateProperty,
+  Users,
   // EditProperty,
   // PropertyDetails,
-} from "./pages";
+} from './pages';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
                 path={`${ALL_ROUTES.PROPERTIES}/create`}
                 element={<CreateProperty />}
               ></Route>
+              <Route path={`${ALL_ROUTES.USER}`} element={<Users />}></Route>
               <Route index element={<Dashboard />}></Route>
             </Route>
           </Route>
