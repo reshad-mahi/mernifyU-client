@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { Outlet } from 'react-router-dom';
 import QrCodeIcon from '@mui/icons-material/QrCode';
 import {
@@ -21,6 +22,7 @@ const sidebarList = [
   { title: 'Dashboard', link: '', icon: QrCodeIcon },
   { title: 'Properties', link: ALL_ROUTES.PROPERTIES, icon: VillaOutlined },
   { title: 'User', link: ALL_ROUTES.USER, icon: PeopleAltOutlined },
+      { title: 'About Me', link: ALL_ROUTES.ABOUT_ME, icon: InfoOutlinedIcon },
   { title: 'Reviews', link: 'barcode', icon: StarOutlineRounded },
   { title: 'Messages', link: 'category', icon: ChatBubbleOutline },
   { title: 'My Profile', link: 'brand', icon: AccountCircleOutlined },

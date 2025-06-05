@@ -9,6 +9,7 @@ import AllProperties from './property/AllProperties';
 import CreateProperty from './property/CreateProperty';
 import EditProperty from './property/EditProperty';
 import PropertyDetails from './property/PropertyDetails';
+import AboutMe from './AboutMe';
 
 export {
   DashboardContainer,
@@ -22,4 +23,5 @@ export {
   CreateProperty,
   EditProperty,
   PropertyDetails,
+  AboutMe,
 };

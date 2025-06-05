@@ -13,6 +13,7 @@ import {
   // Agents,
   CreateProperty,
   Users,
+      AboutMe,
   // EditProperty,
   // PropertyDetails,
 } from './pages';
@@ -35,6 +36,7 @@ function App() {
                 element={<CreateProperty />}
               ></Route>
               <Route path={`${ALL_ROUTES.USER}`} element={<Users />}></Route>
+              <Route path={ALL_ROUTES.ABOUT_ME} element={<AboutMe />} />
               <Route index element={<Dashboard />}></Route>
             </Route>
           </Route>
