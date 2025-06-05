@@ -5,21 +5,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid'; // No longer using Grid
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { Link } from 'react-router-dom';
+import { Link, Form } from 'react-router-dom'; // Changed
+
 const Login = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  // handleSubmit function removed
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -37,7 +31,8 @@ const Login = () => {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        {/* Changed from Box to Form, removed onSubmit and sx */}
+        <Form method="post" noValidate style={{ marginTop: "8px", width: "100%" }}>
           <TextField
             margin="normal"
             required
@@ -77,19 +72,22 @@ const Login = () => {
               Skip Authentication
             </Button>
           </Link>
-          <Grid container display="flex" justifyContent="space-between">
-            <Grid item>
+          {/* Changed from Grid container to Box */}
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", mt: 2 }}>
+            {/* Changed from Grid to Box */}
+            <Box>
               <Typography variant="body2" color="primary">
                 Forgot password?
               </Typography>
-            </Grid>
-            <Grid item>
+            </Box>
+            {/* Changed from Grid to Box */}
+            <Box>
               <Typography variant="body2">
                 {"Don't have an account? Sign Up"}
               </Typography>
-            </Grid>
-          </Grid>
-        </Box>
+            </Box>
+          </Box>
+        </Form> {/* Changed from </Box> to </Form> */}
       </Box>
     </Container>
   );

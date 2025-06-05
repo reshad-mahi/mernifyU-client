@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid'; // No longer using Grid
 import { Link } from 'react-router-dom';
 
 export default function NotFound() {
@@ -14,26 +14,24 @@ export default function NotFound() {
       }}
     >
       <Container maxWidth="md">
-        <Grid container spacing={2}>
-          <Grid xs={6}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2, alignItems: 'center' }}>
+          <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="h1">404</Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" gutterBottom>
               The page you’re looking for doesn’t exist.
             </Typography>
-
             <Link to="/">
               <Button variant="contained">Back Home</Button>
             </Link>
-          </Grid>
-          <Grid xs={6}>
+          </Box>
+          <Box sx={{ flex: 1, textAlign: 'center' }}>
             <img
               src="https://cdn.pixabay.com/photo/2017/03/09/12/31/error-2129569__340.jpg"
-              alt=""
-              width={500}
-              height={250}
+              alt="Not Found"
+              style={{ maxWidth: '100%', height: 'auto', maxHeight: '250px' }}
             />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
